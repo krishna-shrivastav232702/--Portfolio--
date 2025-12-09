@@ -1,9 +1,14 @@
-import Image from "next/image";
+"use client"
+
+import IntroAnimation from "@/components/IntroAnimation";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      Hello , This is The beginning of something new
-    </div>
+    <>
+      <IntroAnimation
+          userName="Krishna Shrivastav"
+          userRole="Engineering Real-Time, Scalable Web Systems"
+        />
+    </>
   );
 }
