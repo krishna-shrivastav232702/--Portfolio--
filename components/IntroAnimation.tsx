@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Big_Shoulders,Space_Grotesk } from "next/font/google";
+import { Big_Shoulders, Space_Grotesk } from "next/font/google";
+import AnimatedName from "./AnimateComponent";
 
 const helloVariations = [
     { text: "hello", fontFamily: "Inter", weight: "font-light", tracking: "tracking-tight" },
@@ -33,7 +34,7 @@ const bigshoulders = Big_Shoulders({
 const spaceGrotesk = Space_Grotesk({
     subsets: ["latin"],
     weight: "700"
-  });
+});
 
 export default function IntroAnimation({ userName, userRole }: IntroAnimationProps) {
     const [currentHello, setCurrentHello] = useState(0);
@@ -65,7 +66,7 @@ export default function IntroAnimation({ userName, userRole }: IntroAnimationPro
         }, 1400);
         return () => clearTimeout(heroTimer);
     }, [showPanels]);
-    
+
     const currentVariant = helloVariations[currentHello];
 
     return (
@@ -121,10 +122,10 @@ export default function IntroAnimation({ userName, userRole }: IntroAnimationPro
                         transition={{ duration: 1 }}
                         className="absolute inset-0 flex flex-col items-center justify-center px-10 md:px-20 bg-[#050505]"
                     >
-                        <motion.h1
-                            initial={{ x: -120, opacity: 0 }}
-                            animate={{ x: 0, opacity: 1 }}
-                            transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
+                        {/* <motion.h1
+                            initial={{ y: 120, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
                             className={` ${bigshoulders.className} text-[15.5vw] sm:text-[14vw] md:text-[12vw] leading-[0.9] uppercase tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#b8cff0] via-[#f0c1d6] to-[#f7d8b8] bg-[length:200%_100%] animate-gradientWave drop-shadow-[0_20px_40px_rgba(0,0,0,0.45)] text-center`}
                             style={{ transform: "scaleY(1.05)" }}
                         >
@@ -133,8 +134,11 @@ export default function IntroAnimation({ userName, userRole }: IntroAnimationPro
                                     {word}
                                 </span>
                             ))}
-                        </motion.h1>
-
+                        </motion.h1> */}
+                        <AnimatedName
+                            text={userName}
+                            className={`${bigshoulders.className} text-[15.5vw] sm:text-[14vw] md:text-[12vw] leading-[0.9] uppercase tracking-tight drop-shadow-[0_20px_40px_rgba(0,0,0,0.45)] text-center`}
+                        />
                         <motion.p
                             initial={{ opacity: 0, y: 16 }}
                             animate={{ opacity: 1, y: 0 }}
