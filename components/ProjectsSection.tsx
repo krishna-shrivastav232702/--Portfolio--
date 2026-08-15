@@ -23,7 +23,7 @@ const projects: Project[] = [
     id: "ide",
     title: "Real-Time Collaborative Proctored IDE",
     description: "A collaborative code editor built to hold up under 120+ simultaneous users — with per-user isolated execution and zero central locking. Each session runs in its own containerized environment with real-time file sync and live terminal streaming.",
-    techTags: ["Socket.IO", "Docker", "Supabase", "Redis", "Cloudflare", "Next.js"],
+    techTags: ["Socket.IO", "Docker", "Supabase", "Redis", "Cloudflare", "Next.js","Yjs"," Monaco Editor"],
     demo: "https://gdg-ide.vercel.app/",
     repo: "#https://github.com/krishna-shrivastav232702/Proctored-IDE",
     image: "/proctored-ide.png",
@@ -32,16 +32,16 @@ const projects: Project[] = [
   id: "Synflow",
   title: "Synflow – Multi-Tenant Workflow Automation Engine",
   description: "A serverless workflow automation platform featuring an asynchronous, event-driven execution loop. Engineered with strict cross-tenant data isolation at the database layer and real-time GraphQL subscriptions for live step-by-step execution tracking.",
-  techTags: ["Next.js", "Hasura GraphQL", "PostgreSQL", "Nhost", "TypeScript"],
+  techTags: ["Next.js", "Hasura GraphQL", "PostgreSQL", "Nhost", "TypeScript","Next.js"],
   demo: "https://vocallabs-three.vercel.app/", 
   repo: "https://github.com/krishna-shrivastav232702/vocallabs", 
   image: "/synflow.png",
 },
   {
-    id: "eduquest",
+    id: "EduQuest",
     title: "EduQuest — AI-Powered Test Platform",
     description: "An AI-powered test preparation platform that uses Google Gemini to generate MCQs directly from uploaded PDFs, with an interactive test environment and smart reminders for upcoming exams.",
-    techTags: ["PostgreSQL", "Prisma", "Express", "React"],
+    techTags: ["AWS","PostgreSQL", "Prisma", "Express", "React.js","Shadcn-UI","framer-motion"],
     repo: "https://github.com/krishna-shrivastav232702/EduQuest",
     image: "/eduquest.png"
   },
@@ -49,7 +49,7 @@ const projects: Project[] = [
     id: "hackpal",
     title: "HackPal — AI-Powered Assistant",
     description: "An AI assistant for hackathon teams that processed 15+ technical documents and resolved 100+ queries spanning debugging, documentation summarization, and project ideation.",
-    techTags: ["Flask", "PostgreSQL", "Next.js"],
+    techTags: ["Flask", "PostgreSQL", "Next.js","Agno","Agentic-AI"],
     repo: "https://github.com/krishna-shrivastav232702/HackPal",
     image: "/hackpal.png"
   },
@@ -57,7 +57,7 @@ const projects: Project[] = [
     id: "ctf",
     title: "GDG NMIT CTF Platform",
     description: "Built and managed a live Capture-The-Flag competition platform used by 100+ participants during a flagship college tech event, handling real-time challenge delivery and live scoring.",
-    techTags: ["React", "Node.js", "PostgreSQL", "Docker"],
+    techTags: ["Next.js", "mongodb","aceternity-ui"],
     repo: "https://github.com/krishna-shrivastav232702/gdg-ctf-2025",
     demo:"https://gdg-ctf-2025.vercel.app/",
     image: "/ctf.png"
@@ -66,8 +66,9 @@ const projects: Project[] = [
     id: "taskaroo",
     title: "Taskaroo",
     description: "A task management app designed for efficient task scheduling, featuring JWT authentication, OTP verification, email reminders, and smart deadline tracking to help users stay organized.",
-    techTags: ["TypeScript", "Node.js", "Express"],
-    repo: "#",
+    techTags: ["TypeScript", "Node.js", "Express","mongodb","Context-API"],
+    repo: "https://github.com/krishna-shrivastav232702/TaskManagmentApp",
+    image: "/taskaroo.png"
   }
 ];
 
