@@ -3,6 +3,9 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Big_Shoulders, Space_Grotesk } from "next/font/google";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { SiLeetcode, SiCodeforces } from "react-icons/si";
+import { HiOutlineDocumentDownload } from "react-icons/hi";
 import AnimatedName from "./AnimateComponent";
 
 const helloVariations = [
@@ -147,6 +150,43 @@ export default function IntroAnimation({ userName, userRole }: IntroAnimationPro
                         >
                             {userRole}
                         </motion.p>
+                        
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.8, duration: 0.8 }}
+                            className="flex gap-6 md:gap-8 mt-10"
+                        >
+                            <a href="https://github.com/krishna-shrivastav232702" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white active:text-white transition-colors duration-300">
+                                <FaGithub className="w-6 h-6 md:w-8 md:h-8" />
+                            </a>
+                            <a href="https://www.linkedin.com/in/krishna-shrivastav-a08b51265/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#0077b5] active:text-[#0077b5] transition-colors duration-300">
+                                <FaLinkedin className="w-6 h-6 md:w-8 md:h-8" />
+                            </a>
+                            <a href="https://leetcode.com/u/user29416/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#ffa116] active:text-[#ffa116] transition-colors duration-300">
+                                <SiLeetcode className="w-6 h-6 md:w-8 md:h-8" />
+                            </a>
+                            <a href="https://codeforces.com/profile/Krishna_Shrivastav" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#1f8acb] active:text-[#1f8acb] transition-colors duration-300">
+                                <SiCodeforces className="w-6 h-6 md:w-8 md:h-8" />
+                            </a>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 1.0, duration: 0.8 }}
+                            className="mt-8"
+                        >
+                            <a
+                                href="https://drive.google.com/file/d/11fDb29E4dih3eLk3F2-jmiKcESwq0pVb/view?usp=sharing"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group inline-flex items-center gap-2.5 px-6 py-2.5 border border-gray-600 rounded-full text-gray-400 hover:text-white hover:border-white transition-all duration-300 hover:bg-white/5 text-sm tracking-widest uppercase"
+                            >
+                                <HiOutlineDocumentDownload className="w-5 h-5 transition-transform duration-300 group-hover:-translate-y-0.5" />
+                                Resume
+                            </a>
+                        </motion.div>
                     </motion.div>
                 )}
             </AnimatePresence>
